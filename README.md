@@ -1,1 +1,13 @@
 # docker-udpspeeder
+
+## .env
+```
+LOCAL_ADDR=0.0.0.0:4096
+REMOTE_ADDR=127.0.0.1:8388 
+PASSWORD=ChangeMe!!!
+TIMEOUT=8
+FEC=20:10
+MAXPACKAGE=200
+MODE=0
+ARGS=-s #-c
+```
