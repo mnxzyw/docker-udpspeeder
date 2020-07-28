@@ -6,11 +6,11 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-ARG UDPSPEEDER_VERSION=20200714.0
-RUN UDP2RAW_VERSION=`wget -qO- -t1 -T2 "https://api.github.com/repos/lhc70000/iina/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g' `
+#ARG UDPSPEEDER_VERSION=20200714.0
+#RUN UDP2RAW_VERSION=`wget -qO- -t1 -T2 "https://api.github.com/repos/wangyu-/UDPspeeder/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g' `
 
 WORKDIR /app
-RUN wget https://github.com/wangyu-/UDPspeeder/releases/download/$UDPSPEEDER_VERSION/speederv2_binaries.tar.gz \
+RUN wget https://github.com/wangyu-/UDPspeeder/releases/latest/download/speederv2_binaries.tar.gz \
   && tar -xzvf speederv2_binaries.tar.gz
 
 
